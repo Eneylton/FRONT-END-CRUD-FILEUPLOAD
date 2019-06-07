@@ -34,10 +34,10 @@ $app-direction: ltr;
 // The "primary" color is the only required color in the map.
 
 $colors: (
-  primary:    #488aff,
-  secondary:  #32db64,
-  danger:     #f53d3d,
-  light:      #f4f4f4,
+  primary:    #beff25,
+  secondary:  #00b637,
+  danger:     #fd0202,
+  light:      #150862,
   dark:       #222
 );
 
@@ -70,7 +70,7 @@ $colors: (
 // so that the above variables are used and Ionic's
 // default are overridden.
 
-@import "ionic.theme.default";
+@import "ionic.theme.dark";
 
 
 // Ionicons
@@ -84,5 +84,21 @@ $colors: (
 // Fonts
 // --------------------------------------------------
 
-@import "roboto";
-@import "noto-sans";
+//@import "roboto";
+//@import "noto-sans";
+
+
+  @font-face{
+
+    font-family: 'Gloria Hallelujah', cursive;
+    src:url('../assets/fonts/GloriaHallelujah.ttf');
+  
+    }
+
+
+
+h1,h2,h3,h4,p,button,ion-title{ 
+
+  font-family: 'Gloria Hallelujah', cursive;
+ 
+}

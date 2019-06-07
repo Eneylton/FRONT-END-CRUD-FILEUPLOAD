@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar color="danger">
+    <ion-title>Galerias</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="card-background-page">
+
+
+  <ion-fab top right edge>
+    <button ion-fab mini (click)="openCadastro()">
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-fab>
+
+  <ion-card *ngFor="let item of items">
+    <img src="../../assets/imgs/{{item.img}}.jpeg" />
+    <div class="card-title">{{item.nome}}</div>
+
+    <ion-fab left bottom>
+      <button color="light" ion-fab mini (click)="openEditar(item)">
+        <ion-icon class="fa-pencil"></ion-icon>
+      </button>
+    </ion-fab>
+
+    <ion-fab right bottom>
+        <button color="danger" ion-fab mini (click)="openExcluir(item)">
+          <ion-icon class="fa-trash"></ion-icon>
+        </button>
+      </ion-fab>
+
+
+  </ion-card>
+
+
+
+
+</ion-content>
